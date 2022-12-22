@@ -7,7 +7,7 @@ if (!address) {
   return console.log('Please provide a location to check weather')
 }
 
-geocode(address, (error, { latitude, longitude, location}) => {
+geocode(address, (error, { latitude, longitude, location } = {}) => {
   if (error) {
     return console.log(error);
   }
